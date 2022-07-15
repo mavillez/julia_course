@@ -15,4 +15,6 @@ Contents
    :maxdepth: 1
 
    about.rst
+   julia_command_line.rst
+   julia_jupyter.rst
    reading_files.rst
