@@ -12,6 +12,7 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
 
    about.rst
    reading_files.rst
