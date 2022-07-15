@@ -186,6 +186,28 @@ to give
   BMW  40000  2021
 
 
+.. warning::
+  
+  Accessing the shell commands is a little bit different in the command line console (also known as `terminal`) and in Jupyter notebook.
 
+  In CLI we only need to type `;` in front of the julia> prompt
+
+  .. code-block:: julia
+  
+    julia> ;
+  
+  then appears the shell prompt
+
+  .. code-block:: julia
+  
+    shell>
+  
+  Now one can type the shell commands as wish.
+
+  In Jupyter notebook one need to type `;` followed with the shell command in the same line, say list the folder contents using `ls`:
+
+  .. code-block:: julia
+
+    ; ls
   
   
