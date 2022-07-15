@@ -188,9 +188,9 @@ to give
 
 .. warning::
   
-  Accessing the shell commands is a little bit different in the command line console (also known as `terminal`) and in Jupyter notebook.
+  Accessing the shell commands is a little bit different in Julia's command line interface REPL (read-eval-print-loop), that can be access through  `Terminal` in MacOS and Linux or `PowerShell` in Windows, and in Jupyter notebook.
 
-  In CLI we only need to type `;` in front of the julia> prompt
+  In REPL we only need to type `;` in front of the julia> prompt
 
   .. code-block:: julia
   
