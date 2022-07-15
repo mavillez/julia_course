@@ -13,5 +13,5 @@ Contents
 
 .. toctree::
 
-   about
-   reading_files
+   about.rst
+   reading_files.rst
