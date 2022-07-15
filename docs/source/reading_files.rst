@@ -10,7 +10,11 @@ File handling in Julia is achieved using functions such as open(), read(), close
 * read(): Read the contents of the file into a single string.
 * close(): Close the file object or the variable holding the instance of an opened file.
 
-Read the contents of a file use: readline(), readlines() or just read().
+Read the contents of a file use: 
+
+* readline()
+* readlines()
+* read()
 
 Opening a file
 --------------
@@ -36,7 +40,7 @@ The opened file is automatically closed after the “do control” ends.
 Reading the file contents
 -------------------------
 
-Read the file contents line by line (one line at a time) using readline() function
+**Read the file contents line by line (one line at a time) using readline() function**
 
 .. code-block:: julia
 
@@ -58,8 +62,7 @@ obtaining
   Ford Focus      27000  2018
   Audi A4         35000  2018
   
-Count the lines and print the line number
------------------------------------------
+**Count the lines and print the line number**
 
 .. code-block:: julia
   
@@ -83,8 +86,7 @@ giving
   4 . Ford Focus      27000  2018
   5 . Audi A4         35000  2018
   
-Reading all the lines of a file into a String array using readlines()
----------------------------------------------------------------------
+**Reading all the lines of a file into a String array using readlines()**
 
 .. code-block:: julia
 
@@ -107,3 +109,83 @@ obtaining
   Ford Focus      27000  2018
   Audi A4         35000  2018
   line count is 5
+  
+**Read all contents of a file into a String at once using read()**
+
+.. code-block:: julia
+
+  f = open("cars.txt", "r")             # opening a file in read mode “r”
+  s = read(f, String)                   # read entire file into a string
+  print(s)                            
+  close(f)
+  
+obtaining
+
+.. code-block:: console
+  
+  Brand           Price  Year
+  Honda Civic     22000  2015
+  Toyota Corolla  25000  2013
+  Ford Focus      27000  2018
+  Audi A4         35000  2018
+
+Writing into a file
+-------------------
+
+.. code-block:: julia
+  
+  output=open(“output_file.txt","w")      # opening a file in write mode “w”
+  write(output, “BMW  40000  2021\n")     # write some data into the file
+  close(output)
+
+Check the presence of the file in the disk by chaning to the `shell` environment by
+
+.. code-block:: julia
+
+  julia>;
+  
+obtaining  
+  
+.. code-block:: julia
+  
+  shell>
+  
+Now just use `ls` to list the files in the directory and `cat output_file.txt` to see the file contents
+
+.. code-block:: julia
+  
+  shell> ls
+  
+giving
+
+.. code-block:: console
+  
+  DataFrames-RDatasets.pages
+  DataFrames-RDatasets.pdf
+  Dataframes.pages
+  Input_Output.pages
+  Input_Output.pdf
+  Julia_introduction.ipynb
+  Session 1 - Introduction Solved.ipynb
+  Session 2 - Files and Data.ipynb
+  Session-2
+  Session-3
+  cars.txt
+  output_file.txt
+  
+and 
+
+.. code-block:: julia
+  
+  shell> cat output_file.txt
+  
+to give
+
+.. code-block:: console
+  
+  BMW  40000  2021
+
+
+
+  
+  
