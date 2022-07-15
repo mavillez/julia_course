@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Julia for Digital Humanities'
+copyright = '2022, M. Avillez'
+author = 'M.Avillez'
 
 release = '0.1'
 version = '0.1.0'
